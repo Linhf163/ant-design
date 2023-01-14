@@ -142,7 +142,9 @@ const Collapse: React.ForwardRefRenderFunction<HTMLDivElement, CollapseProps> = 
 
 const RefCollapse = React.forwardRef<HTMLDivElement, CollapseProps>(
   Collapse,
-) as unknown as React.ForwardRefExoticComponent<CollapseProps & React.RefAttributes<RcCollapse>> & {
+) as unknown as React.ForwardRefExoticComponent<
+  CollapseProps & React.RefAttributes<HTMLDivElement>
+> & {
   Panel: typeof CollapsePanel;
 };
 
